@@ -2,27 +2,28 @@
     <title> calculator</title>
 </svelte:head>
 
-<div class=" h-[30rem] bg-white w-[20rem] rounded-3xl grid grid-cols-4 gap-3 "> 
-    <button> % </button>
-    <button> √ </button>
-    <button> CE </button>
-    <button> C </button>
+<div class="  bg-white w-[20rem] rounded-3xl grid grid-cols-4 gap-3 p-5 flex justify-center font-bold text-xl shadow-2xl"> 
+    <div class="bg-blue-500 rounded-full col-span-4 h-[4rem] flex items-center px-4 mb-4 text-white  "> 122</div>
+    <button class="bg-[#f3f6fc]"> % </button>
+    <button class="bg-[#f3f6fc]"> √ </button>
+    <button class="bg-[#f3f6fc]"> CE </button>
+    <button class="bg-[#1f2b54] text-white"> C </button>
     <button> 7 </button>
     <button> 8 </button>
     <button> 9 </button>
-    <button> - </button>
+    <button class="bg-[#fd3f59] text-white "> - </button>
     <button> 4 </button>
     <button> 5 </button>
     <button> 6 </button>
-    <button> ÷ </button>
+    <button class="bg-[#2285fd] text-white"> ÷ </button>
     <button> 1 </button>
     <button> 2 </button>
     <button> 3 </button>
-    <button> x </button>
+    <button class="bg-[#f9c80e] text-white"> x </button>
     <button> . </button>
     <button> 0 </button>
     <button> = </button>
-    <button> + </button>
+    <button class="bg-[#63dc74] text-white"> + </button>
 </div>
 
 
