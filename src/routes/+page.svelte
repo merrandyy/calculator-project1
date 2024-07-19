@@ -12,7 +12,16 @@
     }
 
     function backspace (){
-        equation=equation.substring(0,equation.length-1);
+        switch (equation.substring(equation.length-3, equation.length)) {
+            case ' * ':
+            case ' = ':
+            case ' / ':
+            case ' - ':
+                equation = equation.substring(0, equation.length-3);
+                break;
+            default:
+                equation = equation.substring(0, equation.length-1);
+        }
     }
 
     function clear (){
@@ -27,12 +36,13 @@
 
 </script>
 
+
 <svelte:head>
     <title> calculator</title>
 </svelte:head>
 
 <div class="  bg-white w-[20rem] rounded-3xl grid grid-cols-4 gap-3 p-5 flex justify-center font-bold text-xl shadow-2xl"> 
-    <div class="bg-blue-500 rounded-full col-span-4 h-[4rem] flex items-center px-4 mb-4 text-white  "> {equation} </div>
+    <div class="bg-blue-500 overflow-auto rounded-full col-span-4 h-[4rem] flex items-center px-4 mb-4 text-white  "> {equation} </div>
     <button on:click={() => addToEquation(" /100")} class="bg-[#f3f6fc]"> <DivisionReminder/> </button>
     <button on:click={backspace} class= "bg-[#f3f6fc] "> <Backspace /> </button>
     
