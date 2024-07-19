@@ -2,9 +2,9 @@
     import SquareRoot from "$lib/icons/squareRoot.svelte";
     import DivisionReminder from "$lib/icons/divisionReminder.svelte";
     import Minus from "$lib/icons/minus.svelte";
-    import Division from "$lib/icons/Division.svelte";
-    import Addition from "$lib/icons/Addition.svelte";
-    import Multiply from "$lib/icons/Multiply.svelte";
+    import Division from "$lib/icons/division.svelte";
+    import Addition from "$lib/icons/addition.svelte";
+    import Multiply from "$lib/icons/multiply.svelte";
     import Backspace from "$lib/icons/backspace.svelte";
 
     function addToEquation (value:string) {
