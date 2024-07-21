@@ -29,8 +29,18 @@
     }
 
     function solve (){
-        equation= eval(equation);
-    }
+        try {
+            let answer=eval(equation);
+            if(answer==undefined) throw SyntaxError;
+
+            equation= answer;
+    } catch (error) { 
+        let output = document.getElementById('output');
+        output?.classList.add('bg-red-500');
+        setTimeout(() => {
+            output?.classList.remove('bg-red-500');
+        },500);
+    }}
     
     let equation: string="";
 
@@ -42,7 +52,7 @@
 </svelte:head>
 
 <div class="  bg-white w-[20rem] rounded-3xl grid grid-cols-4 gap-3 p-5 flex justify-center font-bold text-xl shadow-2xl"> 
-    <div class="bg-blue-500 overflow-auto rounded-full col-span-4 h-[4rem] flex items-center px-4 mb-4 text-white  "> {equation} </div>
+    <div id="output" class="bg-blue-500 overflow-auto rounded-full col-span-4 h-[4rem] flex items-center px-4 mb-4 text-white transition-all"> {equation} </div>
     <button on:click={() => addToEquation(" /100")} class="bg-[#f3f6fc]"> <DivisionReminder/> </button>
     <button on:click={backspace} class= "bg-[#f3f6fc] "> <Backspace /> </button>
     
